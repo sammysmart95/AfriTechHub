@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFRITECH DIGITAL HUB</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #1E3D59;
+            --secondary: #FF6B35;
+            --accent: #17B890;
+            --light-mint: #B9E6D3;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5rem;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-logo {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .partner-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 5rem;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 500px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 5rem;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            flex: 1;
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mission-card { background: var(--accent); }
+        .vision-card { background: var(--secondary); }
+
+        /* Pattern Border */
+        .pattern-border {
+            height: 10px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--secondary),
+                var(--secondary) 10px,
+                var(--accent) 10px,
+                var(--accent) 20px
+            );
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 4rem 5rem;
+            background: white;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-details h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .features-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .features-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: var(--primary);
+            padding: 4rem 5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .impact-card {
+            background: rgba(255, 107, 53, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        /* Why Choose Us */
+        .why-choose-section {
+            background: var(--light-mint);
+            padding: 4rem 5rem;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem;
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Partner Modal */
+        #partnerModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #partnerModal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar,
+            .hero,
+            .about,
+            .product-section,
+            .impact-section,
+            .why-choose-section,
+            .contact-section {
+                padding: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cards-container,
+            .product-container,
+            .impact-grid,
+            .features-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">AFRITECH DIGITAL HUB</div>
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contacts</a>
+            <button onclick="openModal()" class="partner-btn">Partner with us</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Afritech Digital Hub - Building Africa's Next Generation of Tech Innovators</h1>
+            <p>We're transforming Africa's technological landscape by equipping young minds with advanced tech skills through innovative educational solutions.</p>
+            <button onclick="openModal()" class="partner-btn">Partner with us</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <div class="cards-container">
+            <div class="card mission-card">
+                <h3>Our Mission</h3>
+                <p>Empowering African youth with advanced technology skills to become global innovators and leaders in the digital age.</p>
+            </div>
+            <div class="card vision-card">
+                <h3>Our Vision</h3>
+                <p>To position Africa as a global leader in technological innovation by nurturing young talent and building solutions that address African challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="pattern-border"></div>
+
+    <!-- Product Section -->
+    <section class="product-section" id="products">
+        <h2>Our Product</h2>
+        <div class="product-container">
+            <img src="/api/placeholder/400/300" alt="CORESCHOOL illustration">
+            <div class="product-details">
+                <h3>CORESCHOOL</h3>
+                <div class="core-features">
+                    <h4>Core Features:</h4>
+                    <ul class="features-list">
+                        <li>Interactive Programming Environments</li>
+                        <li>Industry-Relevant Curriculum</li>
+                        <li>Progress Tracking & Assessment</li>
+                        <li>Teacher Support System</li>
+                    </ul>
+
+                    <div class="implementation-details">
+                        <h4>Built for Africa</h4>
+                        <ul class="features-list">
+                            <li>Offline-first approach</li>
+                            <li>Supports multiple devices</li>
+                            <li>Low resource adaptable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="pattern-border"></div>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <h2>Our Impact</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <p>Target</p>
+                <h3>500</h3>
+                <p>Partner Schools</p>
+            </div>
+            <div class="impact-card">
+                <p>Potential Impact</p>
+                <h3>200,000</h3>
+                <p>students</p>
+            </div>
+            <div class="impact-card">
+                <p>Focus</p>
+                <h3>Advanced</h3>
+                <p>tech skills</p>
+            </div>
+            <div class="impact-card">
+                <p>Coverage</p>
+                <h3>Pan-African</h3>
+                <p>reach</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <h2>Why choose Us?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>African-Focused Solutions</h3>
+                <ul class="features-list">
+                    <li>Deep understanding of local context</li>
+                    <li>Solutions designed for Africa</li>
+                    <li>Cultural relevance</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h3>Technical Expertise</h3>
+                <ul class="features-list">
+                    <li>14 years combined experience</li>
+                    <li>Industry-proven methodologies</li>
+                    <li>Cutting-edge technology stack</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h3>Educational Innovation</h3>
+                <ul class="features-list">
+                    <li>Interactive learning approaches</li>
+                    <li>Practical skill development</li>
+                    <li>School integration expertise</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="get-in-touch">
+                <h2>Get In Touch</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject *" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="partner-btn">Send message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>Phone: +234 7017373521</p>
+                <p>WhatsApp: +234 7017373521</p>

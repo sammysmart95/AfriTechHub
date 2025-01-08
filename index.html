@@ -56,12 +56,12 @@
             border-radius: 4px;
             font-size: 0.9rem;
             cursor: pointer;
-        }
+        } 
 
         /* Hero Section */
         .hero {
             height: 600px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/600');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
@@ -357,27 +357,123 @@
     <div class="pattern-border"></div>
 
     <!-- Product Section -->
-    <section class="product-section" id="products">
-        <h2>Our Product</h2>
-        <div class="product-container">
-            <img src="/api/placeholder/400/300" alt="CORESCHOOL illustration">
-            <div class="product-details">
-                <h3>CORESCHOOL</h3>
-                <div class="core-features">
-                    <h4>Core Features:</h4>
-                    <ul class="features-list">
-                        <li>Interactive Programming Environments</li>
-                        <li>Industry-Relevant Curriculum</li>
-                        <li>Progress Tracking & Assessment</li>
-                        <li>Teacher Support System</li>
-                    </ul>
+    <style>
+        .product-section {
+            padding: 4rem 5rem;
+            background: white;
+        }
 
-                    <div class="implementation-details">
-                        <h4>Built for Africa</h4>
+        .product-heading {
+            font-size: 1.5rem;
+            color: #1E3D59;
+            margin-bottom: 2rem;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+        }
+
+        .product-image {
+            width: 100%;
+        }
+
+        .product-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .features-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #FF6B35;
+        }
+
+        .core-features {
+            margin-bottom: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .feature-section h3 {
+            font-size: 1rem;
+            color: #1E3D59;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="product-section">
+        <h2 class="product-heading">Our Product</h2>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="illustration.svg" alt="Product illustration">
+            </div>
+            <div class="product-content">
+                <div>
+                    <h3 class="product-title">CORESCHOOL</h3>
+                    <p class="product-description">Tech Innovation Hub built for Africa, delivering industry-relevant tech skills through engaging, structured learning environments.</p>
+                </div>
+
+                <div class="core-features">
+                    <h3>Core Features:</h3>
+                    <ul class="features-list">
+                        <li>Interactive Programming Environments: Learn by doing with project-based, interactive curriculum</li>
+                        <li>Industry-Relevant Curriculum: Master Software Engineering, AI, Cloud Computing, and Cybersecurity through practical, real-world experiences</li>
+                        <li>Progress Tracking & Assessment: Monitor student growth through comprehensive analytics</li>
+                        <li>Teacher Support System: Empower educators with training, resources, and continuous professional development</li>
+                    </ul>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-section">
+                        <h3>Built for Africa</h3>
                         <ul class="features-list">
                             <li>Offline-first approach</li>
                             <li>Supports multiple devices</li>
                             <li>Low resource adaptable</li>
+                            <li>Cultural integration</li>
+                        </ul>
+                    </div>
+                    <div class="feature-section">
+                        <h3>Implementation Support</h3>
+                        <ul class="features-list">
+                            <li>Technical setup guidance</li>
+                            <li>Teacher training program</li>
+                            <li>Technical support</li>
+                            <li>Regular system upgrades</li>
                         </ul>
                     </div>
                 </div>
@@ -385,58 +481,183 @@
         </div>
     </section>
 
-    <div class="pattern-border"></div>
-
     <!-- Impact Section -->
+    <style>
+        .impact-section {
+            background: #1E3D59;
+            padding: 4rem 5rem;
+        }
+
+        .impact-title {
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .impact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .impact-card {
+            background: #FF6B35;
+            padding: 2rem;
+            border-radius: 8px;
+            color: white;
+            width: 250px;
+            opacity: 0.9;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .metric-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Coral colored cards with slight transparency */
+        .impact-card {
+            background: rgba(255, 107, 53, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
     <section class="impact-section">
-        <h2>Our Impact</h2>
+        <h2 class="impact-title">Our Impact</h2>
         <div class="impact-grid">
             <div class="impact-card">
-                <p>Target</p>
-                <h3>500</h3>
-                <p>Partner Schools</p>
+                <div class="metric-label">Target</div>
+                <div class="metric-value">500 Partner Schools</div>
             </div>
             <div class="impact-card">
-                <p>Potential Impact</p>
-                <h3>200,000</h3>
-                <p>students</p>
+                <div class="metric-label">Potential Impact</div>
+                <div class="metric-value">200,000 students</div>
             </div>
             <div class="impact-card">
-                <p>Focus</p>
-                <h3>Advanced</h3>
-                <p>tech skills</p>
+                <div class="metric-label">Focus</div>
+                <div class="metric-value">Advanced tech skills</div>
             </div>
             <div class="impact-card">
-                <p>Coverage</p>
-                <h3>Pan-African</h3>
-                <p>reach</p>
+                <div class="metric-label">Coverage</div>
+                <div class="metric-value">Pan-African reach</div>
             </div>
         </div>
     </section>
-
     <!-- Why Choose Us -->
+    <style>
+        .why-choose-section {
+            background: #B9E6D3;  /* Light mint background */
+            padding: 4rem 5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1E3D59;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            flex: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            color: #1E3D59;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .feature-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #FF6B35;
+        }
+    </style>
+</head>
+<body>
     <section class="why-choose-section">
-        <h2>Why choose Us?</h2>
+        <h2 class="section-title">Why choose Us?</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <h3>African-Focused Solutions</h3>
-                <ul class="features-list">
+                <div class="feature-icon">
+                    <!-- Plane icon placeholder -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B35">
+                        <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">African-Focused Solutions</h3>
+                <ul class="feature-list">
                     <li>Deep understanding of local context</li>
                     <li>Solutions designed for Africa</li>
                     <li>Cultural relevance</li>
                 </ul>
             </div>
+
             <div class="feature-card">
-                <h3>Technical Expertise</h3>
-                <ul class="features-list">
+                <div class="feature-icon">
+                    <!-- Chart icon placeholder -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B35">
+                        <path d="M4 4h16v16H4V4z M6 16h4v-8H6v8z M12 16h4v-4h-4v4z"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Technical Expertise</h3>
+                <ul class="feature-list">
                     <li>14 years combined experience</li>
                     <li>Industry-proven methodologies</li>
                     <li>Cutting-edge technology stack</li>
                 </ul>
             </div>
+
             <div class="feature-card">
-                <h3>Educational Innovation</h3>
-                <ul class="features-list">
+                <div class="feature-icon">
+                    <!-- Innovation icon placeholder -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B35">
+                        <path d="M12 2L4 12h4v8h8v-8h4L12 2z"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Educational Innovation</h3>
+                <ul class="feature-list">
                     <li>Interactive learning approaches</li>
                     <li>Practical skill development</li>
                     <li>School integration expertise</li>
@@ -446,16 +667,116 @@
     </section>
 
     <!-- Get In Touch -->
-    <section class="contact-section" id="contact">
+    <style>
+        .contact-section {
+            padding: 4rem 0;
+            background: #fff;
+        }
+
+        .contact-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .get-in-touch {
+            flex: 2;
+            padding: 0 2rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            background: #1E3D59;
+            color: white;
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .form-title {
+            font-size: 1.2rem;
+            color: #1E3D59;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            background: #f5f5f5;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .send-message-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: #1E3D59;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        /* Contact Info Styling */
+        .contact-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .stay-connected {
+            margin-top: 2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
         <div class="contact-container">
             <div class="get-in-touch">
-                <h2>Get In Touch</h2>
+                <h2 class="form-title">Get In Touch</h2>
                 <form>
                     <div class="form-group">
                         <input type="text" placeholder="Your name *" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email Address *" required>
+                        <input type="email" placeholder="Your email *" required>
                     </div>
                     <div class="form-group">
                         <input type="text" placeholder="Subject *" required>
@@ -463,10 +784,26 @@
                     <div class="form-group">
                         <textarea placeholder="Message" required></textarea>
                     </div>
-                    <button type="submit" class="partner-btn">Send message</button>
+                    <button type="submit" class="send-message-btn">Send message</button>
                 </form>
             </div>
+
             <div class="contact-info">
-                <h3>Contact</h3>
-                <p>Phone: +234 7017373521</p>
-                <p>WhatsApp: +234 7017373521</p>
+                <div class="contact-details">
+                    <h3>Contact</h3>
+                    <p>Phone: +234 7017373521</p>
+                    <p>WhatsApp: +234 7017373521</p>
+                    <p>Email: Afritechdigitalhub@gmail.com</p>
+                </div>
+
+                <div class="stay-connected">
+                    <h3>Stay connected</h3>
+                    <div class="social-icons">
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
